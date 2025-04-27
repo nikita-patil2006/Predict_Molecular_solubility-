@@ -1,0 +1,144 @@
+/* Background color for the whole page */
+[data-testid="stAppViewContainer"] {
+    background-color: #0A192F; /* Dark scientific blue */
+    overflow: hidden;
+}
+
+/* Sidebar Styling */
+section[data-testid="stSidebar"] {
+    background-color: #112240;
+    color: white;
+}
+
+/* Atom Styling */
+.atom {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(173, 216, 230, 1); /* Light Blue */
+    box-shadow: 0 0 10px rgba(173, 216, 230, 0.8);
+}
+
+/* Orbit Styling */
+.orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 20px solid black; /* Clearly Visible Black Orbits */
+    animation: orbit 6s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Define Orbit Sizes */
+.orbit.one  { width: 100px; height: 100px; animation-duration: 8s; }
+.orbit.two  { width: 150px; height: 150px; animation-duration: 10s; }
+.orbit.three { width: 200px; height: 200px; animation-duration: 12s; }
+.orbit.four  { width: 250px; height: 250px; animation-duration: 14s; }
+.orbit.five  { width: 300px; height: 300px; animation-duration: 16s; }
+
+/* Position 3 Atoms in Each Orbit */
+.orbit .atom:nth-child(1) { transform: rotate(0deg) translateX(50%) rotate(0deg); }
+.orbit .atom:nth-child(2) { transform: rotate(120deg) translateX(50%) rotate(-120deg); }
+.orbit .atom:nth-child(3) { transform: rotate(240deg) translateX(50%) rotate(-240deg); }
+
+/* Animation for Orbits */
+@keyframes orbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}/* styles.css */
+.team-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -40px;
+  }
+  
+  .team-wrap {
+    padding: 0 40px;
+    text-align: center;
+  }
+  
+  .team-img img {
+    transition: all .2s ease-in-out;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .team-member {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .team-title {
+    margin: 30px 0 7px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .overlay {
+    background-color: rgba(20,20,20,.7);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    border-radius: 50%;
+  }
+  
+  .team-details {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 5%;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    transition: all .2s ease-in-out;
+    text-align: center;
+  }
+  
+  .team-details p {
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .team-img:hover .team-details {
+    opacity: 1;
+    margin-top: -40px;
+  }
+  
+  .team-img:hover .overlay {
+    opacity: 1;
+  }
+  
+  .socials a {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+  }
+  
+  .socials i {
+    line-height: 37px;
+    color: #616161;
+    font-size: 14px;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.2s linear;
+  }
+  
+  .team-details .socials i {
+    color: #fff;
+  }
+  
+  .socials a:hover i {
+    color: #fff;
+    background-color: #355c7d;
+  }
